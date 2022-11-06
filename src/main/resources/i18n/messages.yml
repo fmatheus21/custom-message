@@ -13,6 +13,7 @@ message:
     not-readable: Existem campos não reconhecidos.
     unauthorized: Não autorizado.
     record-exist: O registro já existe.
+    cpf-exist: O CPF já existe.
   success:
     delete: Registro excluído com sucesso.
     update: Registro atualizado com sucesso.

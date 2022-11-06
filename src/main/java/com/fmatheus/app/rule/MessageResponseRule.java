@@ -78,5 +78,9 @@ public class MessageResponseRule {
         return new UserInactiveException(MessagesEnum.ERROR_USER_INACTIVE.getMessage());
     }
 
+    public BadRequestException badRequestErrorCpfExist() {
+        return new BadRequestException(MessagesEnum.ERROR_CPF_EXIST);
+    }
+
 
 }

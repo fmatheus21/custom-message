@@ -25,7 +25,8 @@ public enum MessagesEnum {
     ERROR_RECORD_EXIST(HttpStatus.BAD_REQUEST, "message.error.record-exist"),
     ERROR_USERNAME_EXIST(HttpStatus.BAD_REQUEST, "message.error.username-exist"),
     ERROR_PHONE_EXIST(HttpStatus.BAD_REQUEST, "message.error.phone-exist"),
-    ERROR_EMAIL_EXIST(HttpStatus.BAD_REQUEST, "message.error.email-exist");
+    ERROR_EMAIL_EXIST(HttpStatus.BAD_REQUEST, "message.error.email-exist"),
+    ERROR_CPF_EXIST(HttpStatus.BAD_REQUEST, "message.error.cpf-exist");
 
 
     @Getter
