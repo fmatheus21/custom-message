@@ -10,6 +10,8 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 
+import java.net.URI;
+
 
 @Component
 public class MessageResponseRule {
@@ -17,21 +19,21 @@ public class MessageResponseRule {
     @Autowired
     private MessageSource messageSource;
 
-    private MessageResponse messageResponse(MessagesEnum messagesEnum) {
+    private MessageResponse messageResponse(MessagesEnum messagesEnum, URI uri) {
         String message = messageSource.getMessage(messagesEnum.getMessage(), null, LocaleContextHolder.getLocale());
-        return new MessageResponse(messagesEnum, messagesEnum.getHttpSttus().getReasonPhrase(), message);
+        return new MessageResponse(messagesEnum, messagesEnum.getHttpSttus().getReasonPhrase(), message, uri);
     }
 
-    public MessageResponse messageSuccessUpdate() {
-        return messageResponse(MessagesEnum.SUCCESS_UPDATE);
+    public MessageResponse messageSuccessUpdate(URI uri) {
+        return messageResponse(MessagesEnum.SUCCESS_UPDATE, uri);
     }
 
-    public MessageResponse messageSuccessCreate() {
-        return messageResponse(MessagesEnum.SUCCESS_CREATE);
+    public MessageResponse messageSuccessCreate(URI uri) {
+        return messageResponse(MessagesEnum.SUCCESS_CREATE, uri);
     }
 
     public MessageResponse messageSuccessDelete() {
-        return messageResponse(MessagesEnum.SUCCESS_DELETE);
+        return messageResponse(MessagesEnum.SUCCESS_DELETE, null);
     }
 
     public BadRequestException errorBadRequest(MessagesEnum messagesEnum) {
