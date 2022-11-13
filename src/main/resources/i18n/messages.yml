@@ -14,6 +14,7 @@ message:
     unauthorized: Não autorizado.
     record-exist: O registro já existe.
     cpf-exist: O CPF já existe.
+    cambium-not-found: Câmbio não encontrado.
   success:
     delete: Registro excluído com sucesso.
     update: Registro atualizado com sucesso.

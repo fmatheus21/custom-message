@@ -8,6 +8,7 @@ import com.fmatheus.app.exception.handler.response.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import java.net.URI;
@@ -34,6 +35,10 @@ public class MessageResponseRule {
 
     public MessageResponse messageSuccessDelete() {
         return messageResponse(MessagesEnum.SUCCESS_DELETE, null);
+    }
+
+    public MessageResponse messageError(HttpStatus httpStatus, String message) {
+        return new MessageResponse(httpStatus, message);
     }
 
     public BadRequestException errorBadRequest(MessagesEnum messagesEnum) {
@@ -82,6 +87,10 @@ public class MessageResponseRule {
 
     public BadRequestException badRequestErrorCpfExist() {
         return new BadRequestException(MessagesEnum.ERROR_CPF_EXIST);
+    }
+
+    public BadRequestException errorCambiumNotFound() {
+        return new BadRequestException(MessagesEnum.ERROR_CAMBIUM_NOT_FOUND);
     }
 
 
