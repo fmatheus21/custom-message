@@ -93,5 +93,9 @@ public class MessageResponseRule {
         return new BadRequestException(MessagesEnum.ERROR_CAMBIUM_NOT_FOUND);
     }
 
+    public BadRequestException errorCambiumNotConverter() {
+        return new BadRequestException(MessagesEnum.ERROR_CAMBIUM_NOT_CONVERTER);
+    }
+
 
 }

@@ -15,6 +15,7 @@ message:
     record-exist: O registro já existe.
     cpf-exist: O CPF já existe.
     cambium-not-found: Câmbio não encontrado.
+    cambium-not-converter: Não foi possível fazer a conversão de câmbio.
   success:
     delete: Registro excluído com sucesso.
     update: Registro atualizado com sucesso.

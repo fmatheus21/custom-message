@@ -27,7 +27,9 @@ public enum MessagesEnum {
     ERROR_PHONE_EXIST(HttpStatus.BAD_REQUEST, "message.error.phone-exist"),
     ERROR_EMAIL_EXIST(HttpStatus.BAD_REQUEST, "message.error.email-exist"),
     ERROR_CPF_EXIST(HttpStatus.BAD_REQUEST, "message.error.cpf-exist"),
-    ERROR_CAMBIUM_NOT_FOUND(HttpStatus.BAD_REQUEST, "message.error.cambium-not-found");
+    ERROR_CAMBIUM_NOT_FOUND(HttpStatus.BAD_REQUEST, "message.error.cambium-not-found"),
+    ERROR_CAMBIUM_NOT_CONVERTER(HttpStatus.BAD_REQUEST, "message.error.cambium-not-converter");
+
 
     @Getter
     private final HttpStatus httpSttus;
