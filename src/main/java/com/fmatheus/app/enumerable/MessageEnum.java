@@ -23,8 +23,6 @@ public enum MessageEnum {
     ERROR_RECORD_EXIST(HttpStatus.BAD_REQUEST, "message.error.record-exist"),
     ERROR_CAMBIUM_NOT_CONVERTER(HttpStatus.BAD_REQUEST, "message.error.cambium-not-converter");
 
-
-
     @Getter
     private final HttpStatus httpSttus;
 
