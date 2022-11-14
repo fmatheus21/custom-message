@@ -10,8 +10,8 @@ public class HttpStatusConstant {
         throw new IllegalStateException(getClass().getName());
     }
 
-    public static final String OK = HttpStatus.OK.getReasonPhrase();
-    public static final String OK_NUMBER = String.valueOf(HttpStatus.OK.value());
+    public static final String OK = HttpStatus.OK.getReasonPhrase().toString();
+    public static final String OK_NUMBER = String.valueOf(HttpStatus.OK.value()).toString();
     public static final String CREATED = HttpStatus.CREATED.getReasonPhrase();
     public static final String CREATED_NUMBER = String.valueOf(HttpStatus.CREATED.value());
     public static final String FORBIDDEN = HttpStatus.FORBIDDEN.getReasonPhrase();
