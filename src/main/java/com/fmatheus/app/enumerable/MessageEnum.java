@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
  *
  * @author Fernando Matheus
  */
-public enum MessagesEnum {
+public enum MessageEnum {
 
     SUCCESS_CREATE(HttpStatus.CREATED, "message.success.create"),
     SUCCESS_UPDATE(HttpStatus.CREATED, "message.success.update"),
@@ -19,17 +19,8 @@ public enum MessagesEnum {
     ERROR_NOT_PERMISSION(HttpStatus.FORBIDDEN, "message.error.not-permission"),
     ERROR_NOT_FOUND(HttpStatus.BAD_REQUEST, "message.error.not-found"),
     ERROR_NOT_READABLE(HttpStatus.BAD_REQUEST, "message.error.not-readable"),
-    ERROR_USER_NOTFOUND(HttpStatus.BAD_REQUEST, "message.error.user-notfound"),
-    ERROR_USER_INACTIVE(HttpStatus.BAD_REQUEST, "message.error.user-inactive"),
     ERROR_NOT_UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "message.error.unauthorized"),
-    ERROR_RECORD_EXIST(HttpStatus.BAD_REQUEST, "message.error.record-exist"),
-    ERROR_USERNAME_EXIST(HttpStatus.BAD_REQUEST, "message.error.username-exist"),
-    ERROR_PHONE_EXIST(HttpStatus.BAD_REQUEST, "message.error.phone-exist"),
-    ERROR_EMAIL_EXIST(HttpStatus.BAD_REQUEST, "message.error.email-exist"),
-    ERROR_CPF_EXIST(HttpStatus.BAD_REQUEST, "message.error.cpf-exist"),
-    ERROR_CAMBIUM_NOT_FOUND(HttpStatus.BAD_REQUEST, "message.error.cambium-not-found"),
-    ERROR_CAMBIUM_NOT_CONVERTER(HttpStatus.BAD_REQUEST, "message.error.cambium-not-converter");
-
+    ERROR_RECORD_EXIST(HttpStatus.BAD_REQUEST, "message.error.record-exist");
 
     @Getter
     private final HttpStatus httpSttus;
@@ -37,7 +28,7 @@ public enum MessagesEnum {
     @Getter
     private final String message;
 
-    MessagesEnum(HttpStatus httpSttus, String message) {
+    MessageEnum(HttpStatus httpSttus, String message) {
         this.httpSttus = httpSttus;
         this.message = message;
     }

@@ -1,7 +1,7 @@
 package com.fmatheus.app.exception;
 
 
-import com.fmatheus.app.enumerable.MessagesEnum;
+import com.fmatheus.app.enumerable.MessageEnum;
 
 /**
  * Ao lancar esta excecao, a mesma sera capturada pela classe AppExceptionHandler onde sera tratada.
@@ -10,12 +10,12 @@ import com.fmatheus.app.enumerable.MessagesEnum;
  */
 public class CouldNotReadException extends RuntimeException {
 
-        public CouldNotReadException(MessagesEnum messagesEnum) {
-            super(messagesEnum.getMessage());
+        public CouldNotReadException(MessageEnum messageEnum) {
+            super(messageEnum.getMessage());
         }
 
-        public CouldNotReadException(MessagesEnum messagesEnum, Throwable cause) {
-            super(messagesEnum.getMessage(), cause);
+        public CouldNotReadException(MessageEnum messageEnum, Throwable cause) {
+            super(messageEnum.getMessage(), cause);
         }
 
 }

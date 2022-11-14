@@ -1,7 +1,7 @@
 package com.fmatheus.app.exception;
 
 
-import com.fmatheus.app.enumerable.MessagesEnum;
+import com.fmatheus.app.enumerable.MessageEnum;
 
 import java.io.Serial;
 
@@ -15,8 +15,8 @@ public class BadRequestException extends RuntimeException {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    public BadRequestException(MessagesEnum messagesEnum) {
-        super(messagesEnum.getMessage());
+    public BadRequestException(MessageEnum messageEnum) {
+        super(messageEnum.getMessage());
     }
 
 }

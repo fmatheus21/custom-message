@@ -1,7 +1,7 @@
 package com.fmatheus.app.exception.handler.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fmatheus.app.enumerable.MessagesEnum;
+import com.fmatheus.app.enumerable.MessageEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,16 +26,16 @@ public class MessageResponse {
     private String path;
 
 
-    public MessageResponse(MessagesEnum messagesEnum, String cause, String message) {
-        this.statusCode = messagesEnum.getHttpSttus().value();
-        this.statusDescription = messagesEnum.getHttpSttus().name();
+    public MessageResponse(MessageEnum messageEnum, String cause, String message) {
+        this.statusCode = messageEnum.getHttpSttus().value();
+        this.statusDescription = messageEnum.getHttpSttus().name();
         this.cause = cause;
         this.message = message;
     }
 
-    public MessageResponse(MessagesEnum messagesEnum, String cause, String message, URI uri) {
-        this.statusCode = messagesEnum.getHttpSttus().value();
-        this.statusDescription = messagesEnum.getHttpSttus().name();
+    public MessageResponse(MessageEnum messageEnum, String cause, String message, URI uri) {
+        this.statusCode = messageEnum.getHttpSttus().value();
+        this.statusDescription = messageEnum.getHttpSttus().name();
         this.cause = cause;
         this.message = message;
         this.path = uri.getPath();

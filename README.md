@@ -37,14 +37,14 @@
 
 ```java
 
-import com.fmatheus.app.rule.MessageResponseRule;
+import com.fmatheus.app.rule.ResponseMessage;
 import com.fmatheus.app.exception.handler.response.MessageResponse;
 
 @Component
 public class YourClass {
 
     @Autowired
-    private MessageResponseRule messageResponseRule;
+    private ResponseMessage responseMessage;
 
     @Autowired
     private YourService service;

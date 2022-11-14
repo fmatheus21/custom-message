@@ -1,21 +1,13 @@
 message:
   error:
-    email-exist: O email já existe.
-    phone-exist: O número de telefone já existe.
-    username-exist: Nome de usuário já existe.
-    user-inactive: Usuário inativo. Contacte o administrador.
-    user-notfound: Usuário não encontrado.
+    record-exist: O registro já existe.
+    unauthorized: Não autorizado.
+    not-readable: Existem campos não reconhecidos.
     internal-server: Houve um erro inesperado. Tente novamente. Caso o problema persista, entre em contato com o administrador.
     forbidden: Acesso negado!
     bad-request: Registro não encontrado.
     not-permission: Você não tem permissão para realizar esta ação.
     not-found: Registro não encontrado.
-    not-readable: Existem campos não reconhecidos.
-    unauthorized: Não autorizado.
-    record-exist: O registro já existe.
-    cpf-exist: O CPF já existe.
-    cambium-not-found: Câmbio não encontrado.
-    cambium-not-converter: Não foi possível fazer a conversão de câmbio.
   success:
     delete: Registro excluído com sucesso.
     update: Registro atualizado com sucesso.
