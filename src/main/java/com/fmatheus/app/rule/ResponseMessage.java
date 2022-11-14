@@ -60,5 +60,10 @@ public class ResponseMessage {
         return new ForbiddenException(MessageEnum.ERROR_FORBIDDEN.getMessage());
     }
 
+    public BadRequestException errorCambiumNotConverter() {
+        return new BadRequestException(MessageEnum.ERROR_CAMBIUM_NOT_CONVERTER);
+    }
+
+
 
 }

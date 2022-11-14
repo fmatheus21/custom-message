@@ -8,6 +8,7 @@ message:
     bad-request: Registro não encontrado.
     not-permission: Você não tem permissão para realizar esta ação.
     not-found: Registro não encontrado.
+    cambium-not-converter: A moeda de converão não foi encontrada.
   success:
     delete: Registro excluído com sucesso.
     update: Registro atualizado com sucesso.
