@@ -1,7 +1,9 @@
 package com.fmatheus.app.constant;
 
+import lombok.ToString;
 import org.springframework.http.HttpStatus;
 
+@ToString
 public class HttpStatusConstant {
 
     private HttpStatusConstant() {
