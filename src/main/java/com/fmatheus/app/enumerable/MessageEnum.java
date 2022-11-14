@@ -21,7 +21,7 @@ public enum MessageEnum {
     ERROR_NOT_READABLE(HttpStatus.BAD_REQUEST, "message.error.not-readable"),
     ERROR_NOT_UNAUTHORIZED(HttpStatus.UNAUTHORIZED, "message.error.unauthorized"),
     ERROR_RECORD_EXIST(HttpStatus.BAD_REQUEST, "message.error.record-exist"),
-    ERROR_CAMBIUM_NOT_CONVERTER(HttpStatus.BAD_REQUEST, "cambium-not-converter");
+    ERROR_CAMBIUM_NOT_CONVERTER(HttpStatus.BAD_REQUEST, "message.error.cambium-not-converter");
 
 
 
