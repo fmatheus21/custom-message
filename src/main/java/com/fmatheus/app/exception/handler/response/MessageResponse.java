@@ -8,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
-import java.net.URI;
 import java.time.LocalDateTime;
 
 @Builder
@@ -23,7 +22,6 @@ public class MessageResponse {
     private String statusDescription;
     private String cause;
     private String message;
-    private String path;
 
 
     public MessageResponse(MessageEnum messageEnum, String cause, String message) {
@@ -31,14 +29,6 @@ public class MessageResponse {
         this.statusDescription = messageEnum.getHttpSttus().name();
         this.cause = cause;
         this.message = message;
-    }
-
-    public MessageResponse(MessageEnum messageEnum, String cause, String message, URI uri) {
-        this.statusCode = messageEnum.getHttpSttus().value();
-        this.statusDescription = messageEnum.getHttpSttus().name();
-        this.cause = cause;
-        this.message = message;
-        this.path = uri.getPath();
     }
 
     public MessageResponse(HttpStatus httpStatus, String message) {

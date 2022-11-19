@@ -10,8 +10,6 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
-import java.net.URI;
-
 
 @Component
 public class ResponseMessage {
@@ -19,21 +17,21 @@ public class ResponseMessage {
     @Autowired
     private MessageSource messageSource;
 
-    private MessageResponse messageResponse(MessageEnum messageEnum, URI uri) {
+    private MessageResponse messageResponse(MessageEnum messageEnum) {
         String message = messageSource.getMessage(messageEnum.getMessage(), null, LocaleContextHolder.getLocale());
-        return new MessageResponse(messageEnum, messageEnum.getHttpSttus().getReasonPhrase(), message, uri);
+        return new MessageResponse(messageEnum, messageEnum.getHttpSttus().getReasonPhrase(), message);
     }
 
-    public MessageResponse successUpdate(URI uri) {
-        return messageResponse(MessageEnum.SUCCESS_UPDATE, uri);
+    public MessageResponse successUpdate() {
+        return messageResponse(MessageEnum.SUCCESS_UPDATE);
     }
 
-    public MessageResponse successCreate(URI uri) {
-        return messageResponse(MessageEnum.SUCCESS_CREATE, uri);
+    public MessageResponse successCreate() {
+        return messageResponse(MessageEnum.SUCCESS_CREATE);
     }
 
     public MessageResponse successDelete() {
-        return messageResponse(MessageEnum.SUCCESS_DELETE, null);
+        return messageResponse(MessageEnum.SUCCESS_DELETE);
     }
 
     public MessageResponse error(HttpStatus httpStatus, String message) {
@@ -63,7 +61,6 @@ public class ResponseMessage {
     public BadRequestException errorCambiumNotConverter() {
         return new BadRequestException(MessageEnum.ERROR_CAMBIUM_NOT_CONVERTER);
     }
-
 
 
 }
