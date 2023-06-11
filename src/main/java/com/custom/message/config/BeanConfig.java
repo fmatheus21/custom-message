@@ -1,4 +1,4 @@
-package com.fmatheus.app.config;
+package com.custom.message.config;
 
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 import org.springframework.context.MessageSource;

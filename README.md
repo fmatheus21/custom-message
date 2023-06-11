@@ -37,23 +37,23 @@
 
 ```java
 
-import com.fmatheus.app.rule.ResponseMessage;
-import com.fmatheus.app.exception.handler.response.MessageResponse;
+import rule.com.custom.message.MessageResponseRule;
+import handler.exception.com.custom.message.MessageResponseHandler;
 
 @Component
 public class YourClass {
 
     @Autowired
-    private ResponseMessage responseMessage;
+    private MessageResponseRule messageResponseRule;
 
     @Autowired
     private YourService service;
 
     /**
      * Retornando uma mensagem de erro.
-     * @return MessageResponse
+     * @return MessageResponseHandler
      */
-    public MessageResponse error() {
+    public MessageResponseHandler error() {
         return this.messageResponseRule.errorNotFound();
     }
 

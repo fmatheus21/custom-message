@@ -1,9 +1,9 @@
-package com.fmatheus.app.exception;
+package com.custom.message.exception;
 
 import java.io.Serial;
 
 /**
- * Ao lancar esta excecao, a mesma sera capturada pela classe AppExceptionHandler onde sera tratada.
+ * Ao lancar esta excecao, a mesma sera capturada pela classe ApiExceptionHandler onde sera tratada.
  *
  * @author Fernando Matheus
  */
